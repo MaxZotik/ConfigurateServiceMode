@@ -1,0 +1,54 @@
+﻿<Page x:Class="ConfigurateService.Pages.ServiceSettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ConfigurateService.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="ServiceSettingPage">
+
+    <Grid>
+        <Grid Grid.Row="1" Panel.ZIndex="-1" Background="FloralWhite"/>
+        <StackPanel>
+                       
+            <WrapPanel>
+                <TextBlock Text="Время сбора значений (сек):" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_time_getting_values" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Время на прогрев оборуд. (сек):" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_time_getting_values_pause" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Время перерасчета уставки (сек):" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_time_getting_values_repeat" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Коэфф. для определения уставки:" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_coefficient_get_point" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Коэфф. для проверки вершин:" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_coefficient_checks_vertex" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Коэфф. удара:" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_coefficient_cnock" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="Номер порта сервера:" Style="{StaticResource TextBlockServiceSetting}"/>
+                <TextBox x:Name="tbx_number_port_server" Style="{StaticResource TextBoxServiceSetting}"/>
+            </WrapPanel>
+
+            <WrapPanel HorizontalAlignment="Center">
+                <Button x:Name="btnSave" Grid.Row="2" Width="175">
+                    <WrapPanel>
+                        <Image Source="/Resources/Images/report.png" Style="{StaticResource Img}"/>
+                        <TextBlock Text="Сохранить"/>
+                    </WrapPanel>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Page>

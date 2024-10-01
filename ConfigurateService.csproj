@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	<ApplicationIcon>Resources\Images\settings.ico</ApplicationIcon>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
+	<GenerateDocumentationFile>False</GenerateDocumentationFile>
+	<SignAssembly>True</SignAssembly>
+	<Company>VAST Associate</Company>
+	<Authors>VAST Development Depatment</Authors>
+	<Product>Конфигуратор службы архивации</Product>
+	<Description>Данный конфигуратор служит в цели настроить работу службы архивации</Description>
+	<Title>Конфигуратор службы архивации</Title>
+	<IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Guides\" />
+  </ItemGroup> 
+
+	<ItemGroup>
+		<None Remove="Resources\Images\add.png" />
+		<None Remove="Resources\Images\back.png" />
+		<None Remove="Resources\Images\logo.png" />
+		<None Remove="Resources\Images\next.png" />
+		<None Remove="Resources\Images\remove.png" />
+		<None Remove="Resources\Images\report.png" />
+		<None Remove="Resources\Images\settings.ico" />
+		<None Remove="Resources\Images\settings.png" />
+		<None Remove="Resources\Images\test.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Resources\Images\add.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Resources\Images\logo.png" />
+		<Resource Include="Resources\Images\next.png" />
+		<Resource Include="Resources\Images\remove.png" />
+		<Resource Include="Resources\Images\settings.ico" />
+		<Resource Include="Resources\Images\settings.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Resources\Images\back.png" />
+		<Resource Include="Resources\Images\report.png" />
+		<Resource Include="Resources\Images\test.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+	
+  <ItemGroup>
+    <None Update="Resources\Guides\Readme.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
